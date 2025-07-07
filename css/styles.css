@@ -1,0 +1,166 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+  color: #0A1E40;
+}
+
+/* Navbar */
+.custom-navbar {
+  background-color: rgba(10, 30, 64, 0.8);
+  transition: background-color 0.4s ease;
+  backdrop-filter: blur(6px);
+  z-index: 999;
+}
+.custom-navbar.scrolled {
+  background-color: #0A1E40 !important;
+}
+.custom-navbar .nav-link {
+  color: #fff;
+  font-weight: 500;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+.custom-navbar .nav-link:hover {
+  color: #4DA8DA;
+}
+.navbar-brand strong {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+/* Sección Inicio */
+.inicio {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(-45deg, #0A1E40, #113B6D, #4DA8DA, #0A1E40);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.inicio .container {
+  z-index: 2;
+}
+
+/* Logo animado */
+.logo {
+  width: 120px;
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+.logo-flotante {
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Título destacado */
+h1 span.resaltado {
+  color: #4DA8DA;
+}
+
+/* Botón personalizado */
+.btn-para {
+  background-color: #4DA8DA;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(77, 168, 218, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.btn-para:hover {
+  background-color: #2b7fa8;
+  transform: scale(1.05);
+}
+.btn-para::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+  transform: rotate(25deg);
+  transition: all 0.8s ease-in-out;
+}
+.btn-para:hover::before {
+  top: 0;
+  left: 100%;
+}
+
+/* Secciones generales */
+section {
+  padding: 80px 0;
+}
+
+/* Sección Quiénes Somos */
+.quienes-somos {
+  background-color: #ffffff;
+  color: #0A1E40;
+  text-align: center;
+}
+.quienes-somos p {
+  line-height: 1.8;
+  color: #0A1E40;
+  font-weight: 400;
+}
+.perfil-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #4DA8DA;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+.perfil-img:hover {
+  transform: scale(1.05);
+}
+
+/* Sección Descarga */
+.descarga {
+  background-color: #F5F9FF;
+  text-align: center;
+}
+
+/* Sección Ubicación */
+.ubicacion {
+  background-color: #ffffff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: #0A1E40;
+  color: white;
+  padding: 20px 0;
+}

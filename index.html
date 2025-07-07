@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto Para</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Leaflet Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#inicio">
+        <img src="assets/images/nuevo_logo.png" alt="Logo" width="32" class="me-2" />
+        <strong>Para</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#quienes">Quiénes Somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#descarga">Descargar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección de Inicio -->
+  <section class="inicio" id="inicio">
+    <div class="overlay"></div>
+    <div class="container d-flex flex-column align-items-center justify-content-center text-center h-100" data-aos="fade-up">
+      <img src="assets/images/nuevo_logo.png" class="logo logo-flotante mb-4" alt="Logo Para" data-aos="zoom-in" />
+      <h1 class="text-white fw-bold">Bienvenidos a <span class="resaltado">Para</span></h1>
+      <p class="lead text-light">Equilibrio. Salud. Tranquilidad.</p>
+      <a href="#descarga" class="btn btn-para mt-3">Descargar App</a>
+    </div>
+  </section>
+
+  <!-- Sección Quiénes Somos -->
+  <section class="quienes-somos" id="quienes">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="fade-up">¿Quiénes Somos?</h2>
+
+      <!-- Descripción del proyecto -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+          <p class="fs-5 text-center">
+            Nuestro proyecto trata de una app para ayudar a combatir esos momentos de ansiedad por medio de juegos como <strong>rompecabezas</strong>, <strong>encuentra la pareja</strong> y otros más. También ofrece <strong>ejercicios de respiración</strong>, <strong>estiramientos</strong>, <strong>sonidos relajantes</strong> y <strong>lectura de libros</strong> que permiten calmarte en momentos difíciles.
+            <br><br>
+            Además, la app se conecta con un <strong>reloj inteligente</strong> que detecta tu ritmo cardíaco (BPMs) y envía los datos para evaluar qué tan ansioso estás. Si no tienes un reloj, también puedes medir tu pulso colocando el dedo sobre la cámara con flash, que detecta los cambios en los pixeles rojos.
+            <br><br>
+            La aplicación registra tus BPMs y muestra <strong>estadísticas de tus juegos más jugados</strong> y tu progreso emocional, ayudándote a entender y mejorar tu bienestar día a día.
+          </p>
+        </div>
+      </div>
+
+      <!-- Perfiles del equipo -->
+      <div class="row justify-content-center">
+        <!-- Persona 1 -->
+        <div class="col-md-4 text-center" data-aos="flip-left" data-aos-delay="0">
+          <img src="assets/images/juan.jpeg" alt="Juan Ruiz" class="perfil-img mb-3">
+          <h5 class="fw-bold">Juan Ruiz </h5>
+        </div>
+
+        <!-- Persona 2 -->
+        <div class="col-md-4 text-center" data-aos="flip-left" data-aos-delay="200">
+          <img src="assets/images/daniel.jpeg" alt="Daniel Chavez" class="perfil-img mb-3">
+          <h5 class="fw-bold">Daniel Chavez</h5>
+        </div>
+
+        <!-- Persona 3 -->
+        <div class="col-md-4 text-center" data-aos="flip-left" data-aos-delay="400">
+          <img src="assets/images/nicolas.jpeg" alt="Nicolas Araque" class="perfil-img mb-3">
+          <h5 class="fw-bold">Nicolas Araque</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Descargue Aquí -->
+  <section class="descarga" id="descarga">
+    <div class="container text-center" data-aos="zoom-in">
+      <h2 class="mb-3">Descargue la App</h2>
+      <p>Disponible para Android y muy pronto para iOS.</p>
+      <a href="public/PARA.apk" class="btn btn-para btn-lg mt-3" download>
+        <i class="fas fa-download me-2"></i>Descargar Ahora
+      </a>
+    </div>
+  </section>
+
+  <!-- Sección Ubicación -->
+  <section class="ubicacion" id="ubicacion">
+    <div class="container text-center" data-aos="fade-up">
+      <h2 class="mb-4">Ubicación</h2>
+      <p>Estamos ubicados en el Centro Biotecnológico del SENA en Mosquera.</p>
+      <div id="map" style="height: 400px; width: 100%; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <p>&copy; 2025 Proyecto Para. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
