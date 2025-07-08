@@ -1,4 +1,3 @@
-<!-- Reemplaza TODO tu index.html con esto -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -34,7 +33,6 @@
   </style>
 </head>
 <body>
-
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
     <div class="container">
@@ -72,7 +70,6 @@
     <div class="container">
       <h2 class="text-center mb-5" data-aos="fade-up">¿Quiénes Somos?</h2>
 
-      <!-- Descripción -->
       <div class="row justify-content-center mb-5">
         <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
           <p class="fs-5 text-center">
@@ -83,7 +80,6 @@
         </div>
       </div>
 
-      <!-- Misión y Visión -->
       <div class="row text-center my-5">
         <div class="col-md-6" data-aos="fade-right">
           <h4 class="fw-bold">Nuestra Misión</h4>
@@ -95,7 +91,6 @@
         </div>
       </div>
 
-      <!-- Perfiles -->
       <div class="row justify-content-center">
         <div class="col-md-4 text-center" data-aos="flip-left">
           <a href="https://www.instagram.com/juanse.ruiz?igsh=MnpubGlwcmxqdnNk" target="_blank">
@@ -150,8 +145,8 @@
 
   <!-- Footer -->
   <footer class="text-center">
-    <p>&copy; 2025 Proyecto Para. Todos los derechos reservados. </p>
-    <p>&copy; Nicolas Araque </p>
+    <p>&copy; 2025 Proyecto Para. Todos los derechos reservados.</p>
+    <p>&copy; Nicolas Araque</p>
     <p>Juan Ruiz</p>
     <p>Daniel Chavez</p>
   </footer>
@@ -161,12 +156,14 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="js/main.js"></script>
-
-  <!-- Inicializar AOS -->
   <script>AOS.init();</script>
 
-  <!-- Inicializar Mapa -->
   <script>
+    window.addEventListener("scroll", function () {
+      const nav = document.querySelector(".custom-navbar");
+      nav.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
     const map = L.map('map').setView([4.68965, -74.22001], 17);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
@@ -175,6 +172,5 @@
       .bindPopup('Centro de Biotecnología Agropecuaria - SENA Mosquera')
       .openPopup();
   </script>
-
 </body>
 </html>
