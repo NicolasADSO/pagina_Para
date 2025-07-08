@@ -181,3 +181,35 @@ footer {
   color: white;
   padding: 20px 0;
 }
+
+
+/* Tema oscuro */
+body.dark-mode {
+  background-color: #0A1E40;
+  color: #f0f0f0;
+}
+
+body.dark-mode .custom-navbar {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .navbar-brand strong,
+body.dark-mode .nav-link {
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .nav-link:hover {
+  color: #4DA8DA !important;
+}
+
+body.dark-mode .descarga,
+body.dark-mode .ubicacion,
+body.dark-mode .quienes-somos {
+  background-color: #112244;
+  color: #f0f0f0;
+}
+
+body.dark-mode footer {
+  background-color: #000000;
+  color: #f0f0f0;
+}
