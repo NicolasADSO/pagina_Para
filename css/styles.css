@@ -220,3 +220,12 @@ body.dark-mode .btn-para {
   background-color: #4DA8DA;
   color: white;
 }
+
+/* Corrección de texto en modo oscuro */
+body.dark-mode .quienes-somos h2,
+body.dark-mode .quienes-somos h4,
+body.dark-mode .quienes-somos p,
+body.dark-mode .quienes-somos h5 {
+  color: #f0f0f0;
+}
+
