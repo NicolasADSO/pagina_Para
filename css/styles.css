@@ -30,6 +30,16 @@ body {
   font-size: 1.2rem;
 }
 
+/* Switch y selector de idioma */
+.form-switch,
+#languageSelect {
+  margin-left: 1rem;
+}
+#languageSelect {
+  min-width: 70px;
+  font-size: 0.85rem;
+}
+
 /* Sección Inicio */
 .inicio {
   position: relative;
@@ -43,20 +53,17 @@ body {
   justify-content: center;
   text-align: center;
 }
-
 @keyframes gradientBG {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
-
 .overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
-
 .inicio .container {
   z-index: 2;
 }
@@ -151,7 +158,6 @@ section {
   transform: scale(1.07);
   box-shadow: 0 10px 25px rgba(77, 168, 218, 0.5);
 }
-
 @media (max-width: 767px) {
   .perfil-img {
     width: 120px;
@@ -182,34 +188,35 @@ footer {
   padding: 20px 0;
 }
 
+/* -------------------- */
+/*       DARK MODE      */
+/* -------------------- */
 
-/* Tema oscuro */
 body.dark-mode {
   background-color: #0A1E40;
   color: #f0f0f0;
 }
-
 body.dark-mode .custom-navbar {
   background-color: rgba(255, 255, 255, 0.05);
 }
-
 body.dark-mode .navbar-brand strong,
 body.dark-mode .nav-link {
   color: #f0f0f0 !important;
 }
-
 body.dark-mode .nav-link:hover {
   color: #4DA8DA !important;
 }
-
 body.dark-mode .descarga,
 body.dark-mode .ubicacion,
 body.dark-mode .quienes-somos {
   background-color: #112244;
   color: #f0f0f0;
 }
-
 body.dark-mode footer {
   background-color: #000000;
   color: #f0f0f0;
+}
+body.dark-mode .btn-para {
+  background-color: #4DA8DA;
+  color: white;
 }
