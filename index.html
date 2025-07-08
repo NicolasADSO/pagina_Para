@@ -5,19 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Proyecto Para</title>
 
+  <!-- Fav Icon -->
   <link rel="shortcut icon" href="assets/images/nuevo_logo.png" type="image/png" />
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- AOS Animations -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Leaflet Map -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css" />
 
-  <style> html { scroll-behavior: smooth; } </style>
+  <style>html { scroll-behavior: smooth; }</style>
 </head>
-
 <body>
-  <!-- NAVBAR -->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#inicio">
@@ -29,47 +41,48 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#quienes">Quiénes Somos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#descarga">Descargar</a></li>
-          <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
+          <li class="nav-item"><a class="nav-link" data-i18n="nav_inicio" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" data-i18n="nav_quienes" href="#quienes">Quiénes Somos</a></li>
+          <li class="nav-item"><a class="nav-link" data-i18n="nav_descarga" href="#descarga">Descargar</a></li>
+          <li class="nav-item"><a class="nav-link" data-i18n="nav_ubicacion" href="#ubicacion">Ubicación</a></li>
         </ul>
-
-        <!-- Controles: tema + idioma -->
-        <div class="d-flex align-items-center ms-3">
-          <div class="form-check form-switch me-2">
-            <input class="form-check-input" type="checkbox" id="themeSwitch" />
-            <label class="form-check-label text-white" for="themeSwitch">🌙</label>
-          </div>
-
-          <select id="languageSelect" class="form-select form-select-sm" style="width: auto;">
-            <option value="es" selected>ES</option>
-            <option value="en">EN</option>
-          </select>
-        </div>
       </div>
     </div>
   </nav>
 
-  <!-- Sección de Inicio -->
+  <!-- Switch y lenguaje -->
+  <div class="d-flex justify-content-end p-3 gap-3 position-fixed top-0 end-0 z-3 mt-2 me-3">
+    <div class="form-check form-switch text-white">
+      <input class="form-check-input" type="checkbox" id="themeSwitch" />
+      <label class="form-check-label" for="themeSwitch">🌙</label>
+    </div>
+    <select id="languageSelect" class="form-select form-select-sm" style="width: auto;">
+      <option value="es" selected>ES</option>
+      <option value="en">EN</option>
+    </select>
+  </div>
+
+  <!-- Inicio -->
   <section class="inicio" id="inicio">
     <div class="overlay"></div>
     <div class="container d-flex flex-column align-items-center justify-content-center text-center h-100" data-aos="fade-up">
       <img src="assets/images/nuevo_logo.png" class="logo logo-flotante mb-4" alt="Logo Para" data-aos="zoom-in" />
-      <h1 class="text-white fw-bold">Bienvenidos a <span class="resaltado">Para</span></h1>
+      <h1 class="text-white fw-bold">
+        <span data-i18n="bienvenida">Bienvenidos a</span> <span class="resaltado">Para</span>
+      </h1>
       <p class="lead text-light" data-i18n="inicio_desc">Equilibrio. Salud. Tranquilidad.</p>
       <a href="#descarga" class="btn btn-para mt-3" data-i18n="descargar">Descargar Ahora</a>
     </div>
   </section>
 
-  <!-- Sección Quiénes Somos -->
+  <!-- Quiénes somos -->
   <section class="quienes-somos" id="quienes">
     <div class="container">
-      <h2 class="text-center mb-5" data-aos="fade-up" data-i18n="quienes_somos">¿Quiénes Somos?</h2>
+      <h2 class="text-center mb-5" data-i18n="quienes_somos">¿Quiénes Somos?</h2>
 
       <div class="row justify-content-center mb-5">
         <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
-          <p class="fs-5 text-center">
+          <p class="fs-5 text-center" data-i18n="quienes_texto">
             Nuestro proyecto trata de una app para ayudar a combatir esos momentos de ansiedad por medio de juegos como <strong>rompecabezas</strong>, <strong>encuentra la pareja</strong> y otros más...
             <br><br>
             La aplicación registra tus BPMs y muestra <strong>estadísticas de tus juegos más jugados</strong> y tu progreso emocional, ayudándote a entender y mejorar tu bienestar día a día.
@@ -80,43 +93,28 @@
       <div class="row text-center my-5">
         <div class="col-md-6" data-aos="fade-right">
           <h4 class="fw-bold" data-i18n="mision">Nuestra Misión</h4>
-          <p>Brindar bienestar emocional mediante una app que combina tecnología, juegos terapéuticos, ejercicios de relajación y monitoreo del ritmo cardíaco.</p>
+          <p class="fs-6" data-i18n="mision_texto">Brindar bienestar emocional mediante una app que combina tecnología, juegos terapéuticos, ejercicios de relajación y monitoreo del ritmo cardíaco.</p>
         </div>
         <div class="col-md-6" data-aos="fade-left">
           <h4 class="fw-bold" data-i18n="vision">Nuestra Visión</h4>
-          <p>Ser una plataforma líder en apoyo emocional y manejo de la ansiedad, reconocida por su innovación e impacto positivo en la salud mental.</p>
-        </div>
-      </div>
-
-      <div class="row justify-content-center">
-        <div class="col-md-4 text-center" data-aos="flip-left">
-          <img src="assets/images/juan.jpeg" alt="Juan Ruiz" class="perfil-img mb-3">
-          <h5 class="fw-bold">Juan Ruiz</h5>
-        </div>
-        <div class="col-md-4 text-center" data-aos="flip-left" data-aos-delay="200">
-          <img src="assets/images/daniel.jpeg" alt="Daniel Chavez" class="perfil-img mb-3">
-          <h5 class="fw-bold">Daniel Chavez</h5>
-        </div>
-        <div class="col-md-4 text-center" data-aos="flip-left" data-aos-delay="400">
-          <img src="assets/images/nicolas.jpeg" alt="Nicolas Araque" class="perfil-img mb-3">
-          <h5 class="fw-bold">Nicolas Araque</h5>
+          <p class="fs-6" data-i18n="vision_texto">Ser una plataforma líder en apoyo emocional y manejo de la ansiedad, reconocida por su innovación e impacto positivo en la salud mental.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Sección Descarga -->
+  <!-- Descarga -->
   <section class="descarga" id="descarga">
     <div class="container text-center" data-aos="zoom-in">
-      <h2 class="mb-3" data-i18n="descargar">Descargue la App</h2>
-      <p>Disponible para Android y muy pronto para iOS.</p>
-      <a href="https://drive.google.com/file/d/1ghOb9W_qyq64mysCh0zl5FUHDsrNkJep/view?usp=sharing" class="btn btn-para btn-lg mt-3" target="_blank">
+      <h2 class="mb-3" data-i18n="descarga_titulo">Descargue la App</h2>
+      <p data-i18n="descarga_texto">Disponible para Android y muy pronto para iOS.</p>
+      <a href="https://drive.google.com/file/d/1ghOb9W_qyq64mysCh0zl5FUHDsrNkJep/view" class="btn btn-para btn-lg mt-3" target="_blank">
         <i class="fas fa-download me-2"></i><span data-i18n="descargar">Descargar Ahora</span>
       </a>
     </div>
   </section>
 
-  <!-- Sección Ubicación -->
+  <!-- Ubicación -->
   <section class="ubicacion" id="ubicacion">
     <div class="container py-5" data-aos="fade-up">
       <h2 class="mb-4 text-center" data-i18n="ubicacion">Ubicación</h2>
@@ -126,9 +124,9 @@
         </div>
         <div class="col-lg-6">
           <h5 class="fw-bold">Centro de Biotecnología Agropecuaria - SENA</h5>
-          <p><i class="fas fa-map-marker-alt me-2"></i>Mosquera, Cundinamarca</p>
-          <p><i class="fas fa-envelope me-2"></i>paraAnsiedad@gmail.com</p>
-          <p><i class="fas fa-phone me-2"></i>+57 300 2118636 Ext. 17999</p>
+          <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>Mosquera, Cundinamarca</p>
+          <p class="mb-2"><i class="fas fa-envelope me-2"></i>paraAnsiedad@gmail.com</p>
+          <p class="mb-0"><i class="fas fa-phone me-2"></i>+57 300 2118636 Ext. 17999</p>
         </div>
       </div>
     </div>
@@ -136,10 +134,10 @@
 
   <!-- Footer -->
   <footer class="text-center">
-    <p>&copy; 2025 Proyecto Para. Todos los derechos reservados.</p>
+    <p data-i18n="footer_derechos">&copy; 2025 Proyecto Para. Todos los derechos reservados.</p>
     <p>&copy; Nicolas Araque</p>
-    <p>&copy; Juan Ruiz</p>
-    <p>&copy; Daniel Chavez</p>
+    <p>Juan Ruiz</p>
+    <p>Daniel Chavez</p>
   </footer>
 
   <!-- Scripts -->
@@ -147,5 +145,6 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="js/main.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
